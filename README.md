@@ -27,9 +27,8 @@ if conditionTwo {
 }
 print("D")
 ```
-
+//
 - A
-- B
 - C
 - D
 
@@ -49,12 +48,9 @@ switch appInfo {
  print("I'm not quite sure what you are looking at")
 }
 ```
-
-- appInfo.0 hasn't released yet
+//
 - myCoolApp hasn't released yet
-- Thanks for looking at myCoolApp!
-- I'm not quite sure what you are looking at
-- It will give a compile-time error
+
 
 ***
 ## Question 3
@@ -74,10 +70,7 @@ default:
  print("D")
 }
 ```
-
-- A
-- B
-- C
+//
 - D
 
 ***
@@ -97,11 +90,8 @@ case "snickers":
  print("Hungry? Grab a Snickers")
 }
 ```
-
-- No parentheses around the conditions
-- No opening and closing brackets in each of the cases
+//
 - No default case in the switch statement
-- No print statement right outside the switch statement
 
 ***
 ## Question 5
@@ -111,19 +101,29 @@ Given the current weather conditions (rain, sunny, snow), use a switch statement
 ```swift
 let currentWeather = "rain"
 
-// enter code below
+//
+let currentWeather = "rain"
+switch currentWeather {
+case "rain":
+print("Don't forget your raincoat!")
+case "sunny":
+print("Wear hats")
+case "snow":
+print("Stay at home")    
+default:
+print("It's nice!")
+}
 ```
-
 ***
 ## Question 6
 
 Given the first name and last name of a Fellow, declare `fullName` variable and use string interpolation to concatenate the Fellow's full name and print to the console e.g The Fellow's full name is John Appleseed
-
-```swift
+```
+//
 let firstName = "John"
 let lastName = "Appleseed"
 
-// enter code below
+let fullName = "\(firstName) \(lastName)"
+print("The Fellow's full name is: " + String(fullName))
 ```
-
 ***
