@@ -411,12 +411,28 @@ default:
 ## Question 15
 
 Complete the code below so that it prints out and tells the user if the sum of the two numbers in the tuple is at least 15.
-
 a. Using a conditional
-
 b. Using a switch statement
 
 ```swift
+//a. Using a conditional
+
 let myTuple: (Int, Int) = (5, 10)
+let tupleSum = myTuple.0 + myTuple.1
+
+if tupleSum <= 15 {
+    print("The sum of two numbers in myTuple \(myTuple) is at least 15")
+} else {
+    print("The sum of numbers in myTuple IS NOT 15")
+}
+//b. Using a switch statement
+let myTuple: (Int, Int) = (5, 10)
+let tupleSum = myTuple.0 + myTuple.1
+switch tupleSum {
+case 15:
+    print("Switch -> The sum of two numbers in myTuple \(myTuple) is at least 15")
+default:
+    break
+}
 ```
 ***
