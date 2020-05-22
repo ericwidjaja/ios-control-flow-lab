@@ -165,6 +165,16 @@ if {
 else {
  print("You lose!")
 }
+
+//your code here
+let winningNumber = 888
+let yourNumber = 888
+if yourNumber == winningNumber {
+    print("You win!🥳")
+}
+else {
+    print("You lose!😢")
+}
 ```
 ***
 
@@ -191,6 +201,22 @@ var numberOfSides = 2
 Output:
 Error
 
+var numberOfSides = 7
+switch numberOfSides {
+case 3:
+    print("Triangle")
+case 4:
+    print("Square")
+case 5:
+    print("Pentagon")
+case 6:
+    print("Hexagon")
+case 8:
+    print("Octagon")
+default:
+    print("Error 😕")
+}
+
 ```
 ***
 
@@ -200,12 +226,32 @@ Create a switch statement that will convert a number grade into a letter grade a
 
 ```swift
 Numeric Score     Letter Grade
-100     A+
-90 - 99    A
-80 - 89    B
-70 - 79     C
-65 - 69     D
-Below 65     F
+     100            A+
+ 90 - 99            A
+ 80 - 89            B
+ 70 - 79            C
+ 65 - 69            D
+Below 65            F
+
+//solution in switch statement:
+
+let score: Int = 63
+switch score {
+case 100:
+    print("A+")
+case 90...99:
+    print("A")
+case 80...89:
+    print("B")
+case 70...79:
+    print("C")
+case 65...69:
+    print("D")
+case ...64:
+    print("F")
+default:
+    print("Wrong score entered as input!😡")
+}
 ```
 ***
 
@@ -222,6 +268,21 @@ if firstName == "Peter" {
  let lastName = "Collins"
 }
 let fullName = firstName + " " + lastName
+
+//Can not re-declare the same constsnt/variable
+//lastName needs to be initiated
+//Code Correction:
+let firstName = "Phil"
+var lastName:String
+
+if firstName == "Peter" {
+    lastName = "Gabriel"
+} else {
+    firstName == "Phil"
+    lastName = "Collins"
+}
+let fullName = firstName + " " + lastName
+print(fullName)
 ```
 ***
 
