@@ -225,13 +225,13 @@ default:
 Create a switch statement that will convert a number grade into a letter grade as shown below:
 
 ```swift
-Numeric Score     Letter Grade
-     100            A+
- 90 - 99            A
- 80 - 89            B
- 70 - 79            C
- 65 - 69            D
-Below 65            F
+ Numeric Score    Letter Grade
+        100            A+
+    90 - 99            A
+    80 - 89            B
+    70 - 79            C
+    65 - 69            D    
+   Below 65            F
 
 //solution in switch statement:
 
@@ -271,6 +271,7 @@ let fullName = firstName + " " + lastName
 
 //Can not re-declare the same constsnt/variable
 //lastName needs to be initiated
+
 //Code Correction:
 let firstName = "Phil"
 var lastName:String
@@ -293,6 +294,38 @@ Write an if statement that prints out what decade of life someone is in (e.g "Yo
 ```swift
 let nameAndBirthYear: (String, Int)
 
+let name: String = "Eric"
+let birthYear: Int = 1999
+let currentYear: Int = 2020
+let age = currentYear - birthYear
+
+if age >= 20 && age <= 29 {
+    print("\(name), you are \(age), in your twenties and called a vicenarian \n")
+} else {
+    print("\(name), you are NOT in your twenties anymore! \n")
+}
+
+//Using SWITCH:
+
+let nameAndBirthYear: (String, Int) = ("Eric", 72)
+switch nameAndBirthYear {
+case (_, 10...19):
+    print("\(nameAndBirthYear.0), you are a denarian")
+case (_, 20...29):
+    print("\(nameAndBirthYear.0), you are in your twenties and called a vicenarian")
+case (_, 30...39):
+    print("\(nameAndBirthYear.0), you are in your thirties and called a tricenarian")
+case (_, 40...49):
+    print("\(nameAndBirthYear.0), you are in your fourties and called a quadragenarian")
+case (_, 50...59):
+    print("\(nameAndBirthYear.0), you are in your fifties and called a quinquagenarian")
+case (_, 60...69):
+    print("\(nameAndBirthYear.0), you are in your sixties, and called a sexagenarian")
+case (_, 70...79):
+    print("\(nameAndBirthYear.0), you are in your retirement 😅")
+default:
+    break
+}
 ```
 ***
 
@@ -315,16 +348,20 @@ case 42:
  print("The answer to life, the universe and everything")
 default:
  print("Some uninteresting number")
+ }
+ 
+ // it should print: "The answer to life, the universe and everything"
 ```
 What happens when you change number to:
 
--a. 365?
+-a. 365? // it should print: "Days in year"
 
--b. 1024?
+-b. 1024? // it should print: "Bytes in a Kilobyte"
 
--c. 65?
+-c. 65? // it should print: "Some uninteresting number"
 
 What happens when you remove the default clause?
+// it will show a compile error - "Switch must be exhaustive"
 
 ***
 
@@ -345,6 +382,28 @@ var message = String()
 
 if population > 10000 {
  message = "\(population) is a large town"
+}
+//IF/ELSE IF:
+var population: Int = 13_000
+var message = String()
+
+if population > 10_000 {
+    message = " \(population) is a large town "
+} else if population > 5_000 && population < 10_000 {
+    message = "It is a medium size town "
+} else {
+    message = "it's a mid-size town "
+}
+print(" for \(population) people, \(message) \n")
+
+//SWITCH:
+switch population {
+case 10_000...:
+    print(" It is a large town for \(population) people \n")
+case 5_000...10_000:
+    print(" It is a medium size town for \(population) people \n")
+default:
+    print(" It's a mid-size town for \(population) people \n")
 }
 ```
 ***
