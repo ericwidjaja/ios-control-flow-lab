@@ -411,7 +411,9 @@ default:
 ## Question 15
 
 Complete the code below so that it prints out and tells the user if the sum of the two numbers in the tuple is at least 15.
+
 a. Using a conditional
+
 b. Using a switch statement
 
 ```swift
@@ -432,7 +434,11 @@ switch tupleSum {
 case 15:
     print("Switch -> The sum of two numbers in myTuple \(myTuple) is at least 15")
 default:
-    break
+    print("The sum of numbers in myTuple is NOT 15.")
 }
+
+// use TERNARY Operator (a ? b : c)
+
+tupleSum == 15 ? print("myTuple \(myTuple) is at least 15") : print("The sum of numbers in myTuple is NOT 15.")
 ```
 ***
