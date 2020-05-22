@@ -28,7 +28,7 @@ if conditionTwo {
 print("D")
 ```
 //
-- A ✅
+- A 
 - C
 - D
 
@@ -101,17 +101,17 @@ Given the current weather conditions (rain, sunny, snow), use a switch statement
 ```swift
 let currentWeather = "rain"
 
-//
-let currentWeather = "rain"
+// enter code below
+
 switch currentWeather {
 case "rain":
-print("Don't forget your raincoat!")
+    print("Don't forget your raincoat!")
 case "sunny":
-print("Wear hats")
+    print("Wear hats")
 case "snow":
-print("Stay at home")    
+    print("Stay at home")
 default:
-print("It's nice!")
+    print("It's nice!")
 }
 ```
 ***
@@ -123,7 +123,180 @@ Given the first name and last name of a Fellow, declare `fullName` variable and 
 let firstName = "John"
 let lastName = "Appleseed"
 
-let fullName = "\(firstName) \(lastName)"
-print("The Fellow's full name is: " + String(fullName))
+let fullName = firstName + lastName
+print("The Fellow's full name is \(fullName)\n")
+```
+***
+## Question 7
+
+Convert the if/else statement below into a switch statement.
+
+```swift
+if temperatureInFahrenheit <= 40 {
+ print("It's cold out.")
+} else if temperatureInFahrenheit >= 85 {
+ print("It's really warm.")
+} else {
+ print("Weather is moderate.")
+}
+
+//Re-written statement here
+let temperatureInFahrenheit: Double = 45
+switch temperatureInFahrenheit {
+case ...40:
+    print("It's cold out ☃️")
+case 85...:
+    print("It's really warm 🏖")
+default:
+    print("Weather is moderate 🌥")
+}
+```
+
+***
+
+## Question 8
+
+Complete the following code so that "You win!" is printed.
+
+```swift
+if {
+ print("You win!")
+} 
+else {
+ print("You lose!")
+}
+```
+***
+
+## Question 9
+
+Given a variable called numberOfSides, write code using a switch so that it prints out the name of the shape. Account for shapes with 3 to 10 sides and print an error message if out of range.
+
+var numberOfSides = 6
+
+```swift
+Example 1:
+
+Input:
+var numberOfSides = 4
+
+Output:
+Square
+
+Example 2:
+
+Input:
+var numberOfSides = 2
+
+Output:
+Error
+
+```
+***
+
+## Question 10
+
+Create a switch statement that will convert a number grade into a letter grade as shown below:
+
+```swift
+Numeric Score     Letter Grade
+100     A+
+90 - 99    A
+80 - 89    B
+70 - 79     C
+65 - 69     D
+Below 65     F
+```
+***
+
+## Question 11
+
+What is wrong with the block of code below?  Correct it so it behaves as expected.
+
+```swift
+let firstName = "Peter"
+
+if firstName == "Peter" {
+ let lastName = "Gabriel"
+} else if firstName == "Phil" {
+ let lastName = "Collins"
+}
+let fullName = firstName + " " + lastName
+```
+***
+
+## Question 12
+
+Write an if statement that prints out what decade of life someone is in (e.g "You are in your twenties). Then, write it as a switch statement.
+
+```swift
+let nameAndBirthYear: (String, Int)
+
+```
+***
+
+
+## Question 13
+
+Consider the below switch statement. What should your system currently print?
+
+```swift
+let number = 42
+
+switch number {
+case 365:
+ print("Days in year")
+case 1024:
+ print("Bytes in a Kilobyte")
+case 0:
+ print("Where arrays start")
+case 42:
+ print("The answer to life, the universe and everything")
+default:
+ print("Some uninteresting number")
+```
+What happens when you change number to:
+
+-a. 365?
+
+-b. 1024?
+
+-c. 65?
+
+What happens when you remove the default clause?
+
+***
+
+
+## Question 14
+
+Consider the variable below called population and the if-condition.
+
+a. Add an else-if-condition that states if population is less than 10000 but greater than 5000, then message changes to say it's "a medium size town".
+
+b. Add an else-condition where message changes to say it's a mid-size town.
+
+c. Convert your final if-else statement to a switch statement.
+
+```swift
+var population: Int = 10000
+var message = String()
+
+if population > 10000 {
+ message = "\(population) is a large town"
+}
+```
+***
+
+## Question 15
+
+Complete the code below so that it prints out and tells the user if the sum of the two numbers in the tuple is at least 15.
+
+a. Using a conditional
+
+b. Using a switch statement
+
+```swift
+let myTuple: (Int, Int) = (5, 10)
 ```
 ***
